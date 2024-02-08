@@ -3,32 +3,29 @@
 
 #include <vector>
 
-struct coord {
+//Custom variables (structs)
+struct coord {                  //struct for storing coords
     short int x;
     short int y;
 };
 
-struct board {
-    int x;
-    int y;
-    std::vector<coord> mines;
+struct board {                  //stores setup data for board
+    int x;                      //height
+    int y;                      //width
+    std::vector<coord> mines;   //vector for storing mine coords
 };
 
 struct endVars {
     bool win;
-    bool end;
+    bool end;                   //saves from adding another var to 3 functions
 };
 
+//constant variables
 const char bomb = '*';
 const char blank = '-';
-const int rationBomb = 5;
+const int rationBomb = 5;       //ratio for num of bombs, smaller number->more bombs
 
-int mod(int x, int y);
-void t();
-
-// Debug functions
-void dispDebug(const board& bdCon, std::vector<std::vector<int>>& bdDisp);
-void printMineCoords(const board& bdCon);
+int mod(int x, int y);          //division of x / y without remainder
 
 // Game start functions
 void init(board& bd);

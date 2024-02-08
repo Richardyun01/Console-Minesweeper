@@ -10,6 +10,7 @@ using namespace std;
 int main()
 {
     srand(time(NULL));
+
     board bdCon;
     coord g;
     endVars e;
@@ -30,7 +31,7 @@ int main()
         guess(g, bdCon);
         action(g, bd, bdDisp, bdCon, e);
         if (e.end) {
-            if (gameover(e.win)) {
+            if (gameover(e.win)) {          //reset game
                 init(bdCon);
                 bombGen(bdCon);
                 reset(bd, bdDisp, bdCon);

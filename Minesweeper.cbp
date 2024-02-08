@@ -13,6 +13,7 @@
 				<Option compiler="gcc-mingw32" />
 			</Target>
 		</Build>
+		<Unit filename="Minesweeper.cpp" />
 		<Unit filename="Minesweeper.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
